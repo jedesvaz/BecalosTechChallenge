@@ -1,0 +1,23 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Entornos virtuales o dependencias
+venv/
+env/
+node_modules/
+
+# Configuración local
+*.env
+.idea/
+.vscode/
+
+# Documentos y archivos de oficina
+*.docx
+*.pptx
+*.xlsx
+*.pdf
