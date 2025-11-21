@@ -1,11 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    Mi primer jale solo
-</body>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mascotas Río Grande</title>
+
+        <meta name="description" content="Tienda de mascotas: alimentos, accesorios y cuidados para tus mejores amigos.">
+    </head>
+    <body>
+        <header>
+            <h1>Mascotas Río Grande</h1>
+            <nav aria-label="Menú principal">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5GYWikx5KCG4shM0yPdPOZ_wGSZa_iJm9lg&s" alt="Mascota" >
+
+            <section id="inicio">
+                <p>¡Tenemos alimentos, juguetes, accesorios y más!</p>
+                <h2>Todo lo que tu mascota necesita en un solo lugar</h2>
+            </section>
+
+            <section id="contacto" aria-labelledby="form-title">
+                <h2 id="form-title">Contáctanos </h2>
+
+                <form id="contactForm" action="#" method="post">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="(55) 1234-5678">
+
+                    <label for="email">Correo electrónico (opcional)</label>
+                    <input type="email" id="email" name="email" required placeholder="tucorreo@ejemplo.com">
+
+                    
+                    <label for="tipo">¿Qué mascota tienes?</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="">Selecciona...</option>
+                        <option value="perro">Perro</option>
+                        <option value="gato">Gato</option>
+                        <option value="ave">Ave</option>
+                        <option value="reptil">Reptil</option>
+                        <option value="otro">Otro</option>
+                    </select>
+
+                    <div>
+                        <legend>Interés</legend>
+                        <label><input type="checkbox" name="interes" value="alimentos"> Alimentos</label>
+                        <label><input type="checkbox" name="interes" value="juguetes"> Juguetes</label>
+                        <label><input type="checkbox" name="interes" value="accesorios"> Accesorios</label>
+                        <label><input type="checkbox" name="interes" value="salud"> Salud y veterinaria</label>
+                    </div>
+
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
+
+                    <p><b>Al enviar aceptas nuestra política de privacidad.</b></p>
+                    <button type="submit">Enviar consulta</button>
+                </form>
+            </section>
+
+            <section id="productos">
+                <h2>Productos destacados</h2>
+                <p>Próximamente: lista de productos y promociones.</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>Río Grande Mall. · Av. Paseo Triunfo de la República 4450· Cd. Juárez, Chih. · (656) 1234-5678</p>
+            <p>© Mascotas Los mejores Amigos. 2025. Todos los derechos reservados.</p>
+        </footer>
+    </body>
 </html>
