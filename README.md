@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Proyecto Final de Introducción a la Programación  
 ### Bécalos Fundación Traxión Tech Challenge
 
@@ -22,3 +23,6 @@ El proyecto puede visualizarse directamente desde el navegador.
 1. Clonar el repositorio:
    ```bash
    git clone https://github.com/jedesvaz/BecalosTechChallenge.git
+=======
+# BecalosTechChallenge
+>>>>>>> parent of 96642cc (doing petshop contact page)
