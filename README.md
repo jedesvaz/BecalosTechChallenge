@@ -4,7 +4,7 @@
 ## Propósito del Proyecto
 Este proyecto consiste en la creación y publicación de una página web básica utilizando HTML y CSS, desplegada a través de GitHub Pages.  
 Su objetivo es demostrar el entendimiento en la construcción de páginas web, la organización de elementos esenciales del código y la práctica en el uso de Git y GitHub para el control de versiones y la publicación de proyectos.
-Se utiliza contacto de tienda de mascotas como aplicación de 
+Se utiliza contacto de tienda de mascotas como aplicación de lo aprendido en el curso y como forma de adelantar el proyecto de landing page para tal negocio
 
 ## Objetivo
 El proyecto busca reforzar los conocimientos adquiridos en el bloque Introducción a la Programación del programa Bécalos Fundación Traxión Tech Challenge, aplicando habilidades prácticas en el desarrollo web.
