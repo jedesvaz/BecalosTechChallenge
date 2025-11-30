@@ -1,0 +1,57 @@
+body {
+        background: beige;
+        font-family: Helvetica, Arial, sans-serif;
+        text-align: center;
+
+    }
+
+    main {
+        border-bottom: 1px solid black;
+    }
+
+    nav {
+        width: 70%;
+        margin: 0px auto;
+        border: 1px solid black;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 15px;
+    }
+
+    header {
+        background: rgba(218, 155, 20, 0.452);
+
+    }
+
+    #inicio {
+        background: rgb(195, 222, 211);
+
+    }
+
+    span {
+        color: brown
+    }
+
+    button {
+
+        background-color: grey;
+        /* Color inicial del botón */
+
+        color: black;
+
+        padding: 10px 20px;
+
+        border: none;
+
+        cursor: pointer;
+
+    }
+
+    button:hover {
+
+        background-color: blue;
+        /* Color del botón cuando el ratón pasa por encima */
+
+    }
