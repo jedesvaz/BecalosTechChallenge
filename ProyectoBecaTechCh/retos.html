@@ -34,6 +34,31 @@
         <button class="botonesContacto">Twitter</button>
         <button class="botonesContacto">Instagram</button>
     </div>
+    <h2>Reto de la Semana Día 3: Tarjetas avanzadas</h2>
+    <p>Clonar una tarjeta con HTML y CSS usando solo
+        propiedades como:</p>
+    <ul>
+        <li>No buscamos ahorita que quede idéntica, solo que se vea similar.</li>
+        <ul>
+            <li>Evita animaciones (vamos paso a paso)</li>
+                <li>No pagues por fuentes</li>
+                <li>¿Por dónde iniciar?, ¿Cómo divido el trabajo?, ¿Qué tienen en común estas tarjetas?</li>
+        </ul>
+
+    </ul>
+    <h3>Tarjeta avanzada 1</h3>
+    <div id="tarjetaavanzada1">
+        
+        <div id="subtarjetaavanzada1">
+            <p>♥</p>
+        </div>
+        <img src="https://e7.pngegg.com/pngimages/613/947/png-clipart-god-of-war-ascension-kratos-atreus-ares-god-of-war-video-game-playstation-4-thumbnail.png" alt="kratos">
+        <br>
+        <h5>Kratos and Artreus Statue - God of War</h5>
+        <p>Departure date: 31/03/2021</p>
+        <p>$999</p>
+        <h5>$599</h5>
+    </div>
 
 </body>
 </html>
@@ -75,5 +100,45 @@
         border-radius: 5px;
         width: 100%;
         padding: 6px;
+    }
+
+    #tarjetaavanzada1 {
+        position: relative;
+        box-sizing: border-box;
+        width: 139px;
+        height: 197px;
+        border-radius: 5px;
+        
+        /* padding: 20px; */
+        margin: 20px;
+        font-family: Arial, sans-serif;
+        background-color: #ddd;
+        color: aliceblue;
+    }
+    #subtarjetaavanzada1 {
+        box-sizing: border-box;
+        width: 139px;
+        height: 83px;
+        text-align: right;
+        border-radius: 5px;
+        
+        
+        
+        background-color: #af4a4a;
+        color: aliceblue;
+    }
+    #tarjetaavanzada1 img{
+        
+        position: absolute;
+    top: 30%;           
+    left: 50%;          
+    transform: translate(-50%, -50%); 
+    width: 80px;      
+    z-index: 10;
+    }
+    #tarjetaavanzada1 p, #tarjetaavanzada1 h5{
+        margin: 5px 10px;
+        font-size: 10px;
+        color: black;
     }
 </style>
