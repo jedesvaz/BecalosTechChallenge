@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retos</title>
+</head>
+<body>
+    <h1>Retos </h1>
+
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="retos.html">Retos</a></li>
+    </ul>
+
+    <h2>Reto de la Semana Día 2: Tarjetas</h2>
+    <p>Clonar una tarjeta con HTML y CSS usando solo
+        propiedades como:</p>
+    <ul>
+        <li>display: block, inline o block-inline</li>
+        <li>Propiedades del Box Model</li>
+        <li>Evita usar display: flex o grid</li>
+
+    </ul>
+    <h3>Tarjeta 1</h3>
+    <div id="tarjeta1">
+        <img src="https://images.squarespace-cdn.com/content/v1/5d77a7f8ad30356d21445262/1695000300830-5TKAFHC2EBYTTM2QUWUP/fotos-de-perfil-blanco-y-negro.jpg" alt="fotoperfil" id="fotoperfil">
+        <h3 class="titulosTrajetas">Jessica Randall</h3>
+        <p class="textotarjetas" style="color: rgb(195, 229, 77);">London, United Kingdom</p>
+        <p class="textotarjetas" >"Front-end developer and avid reader"</p>
+        <button class="botonesContacto">Github</button>
+        <button class="botonesContacto">Frontend Mentor</button>
+        <button class="botonesContacto">LinkedIn</button>
+        <button class="botonesContacto">Twitter</button>
+        <button class="botonesContacto">Instagram</button>
+    </div>
+
+</body>
+</html>
+<style>
+    #tarjeta1 {
+        box-sizing: border-box;
+        width: 230px;
+        height: 368px;
+        border: 2px solid black;
+        border-radius: 15px;
+        
+        padding: 20px;
+        margin: 20px;
+        font-family: Arial, sans-serif;
+        background-color: #1f1f1f;
+        text-align: center;
+        color: aliceblue;
+    }
+    #tarjeta1 p{
+        margin: 5px 0;
+        font-size: 10px;
+    }
+    #fotoperfil{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto 15px auto;
+    }
+    .botonesContacto{
+        box-sizing: border-box;
+        background-color: rgb(51, 51, 51);
+        color: aliceblue;
+        display: block;
+        margin: 0 auto 10px auto;
+        border: none;
+
+        cursor: pointer;
+        border-radius: 5px;
+        width: 100%;
+        padding: 6px;
+    }
+</style>
