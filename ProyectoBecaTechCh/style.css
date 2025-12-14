@@ -165,3 +165,24 @@ button:hover {
     margin-top: 5px;
     padding: 10px 20px;
 }
+.fixed {
+    position: fixed;
+    background-color: #32936f;
+    color: #ddd;
+    height: 50px;
+    width: 200px;
+    top: 0px;
+    right: 0px;
+    border-radius: 5px;
+}
+
+.sticky {
+    position: sticky;
+    background-color:#2274a5;
+    color: #ddd;
+    height: 50px;
+    width: 250px;
+    top: 0px;
+    border-radius: 5px;
+}
+
