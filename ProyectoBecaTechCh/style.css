@@ -26,7 +26,7 @@ main {
 nav {
     width: 70%;
     margin: 0px auto;
-    border: 1px solid black;
+   
 }
 
 nav ul li {
@@ -34,20 +34,14 @@ nav ul li {
     margin: 15px;
 }
 
-header {
-    background: rgba(218, 155, 20, 0.452);
 
-}
 
 #inicio {
     background: rgb(195, 222, 211);
-
+    border-radius: 20px;;
 }
 
 
-span {
-    color: brown;
-}
 
 button {
 
@@ -62,6 +56,8 @@ button {
 
     cursor: pointer;
     border-radius: 5px;
+    transition: 0.3s;
+    
 
 }
 
@@ -174,7 +170,7 @@ button:hover {
     color: #ddd;
     height: 50px;
     width: 200px;
-    bottom: 0px;
+    bottom: 82px;
     right: 0px;
     border-radius: 5px;
 }
@@ -189,10 +185,7 @@ button:hover {
     border-radius: 5px;
 }
 
-#navegador{
-    display: flex;
-    justify-content: space-between;
-}
+
 
 header{
     position: sticky;
@@ -202,18 +195,158 @@ section .contenedor-principal{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-content: flex-start
 }
 
-#navegador img{
-    display: block;
-    width: 300px;
-    max-width: 100%;
-    object-fit: cover;
-    border-radius: 20%; 
-}
+
+
 
 #contacto form{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+
+.cookie-footer {
+
+  position: fixed; /* Siempre visible al final de la pantalla */
+
+  bottom: 0; /* Pegado a la parte inferior */
+
+  left: 0;
+
+  right: 0;
+
+  background-color: #222; /* Fondo oscuro para que destaque */
+
+  color: #fff; /* Texto en blanco para buen contraste */
+
+  padding: 1em;
+
+  display: flex; /* Organiza el contenido de manera horizontal */
+
+  justify-content: space-between; /* Espacia el texto y el botón */
+
+  align-items: center;
+
+}
+
+.cookie-footer button {
+
+  background-color: #4caf50; /* Verde para el botón */
+
+  color: white;
+
+  border: none;
+
+  padding: 0.5em 1em;
+
+  cursor: pointer;
+
+}
+
+.cookie-footer button:hover {
+
+  background-color: #45a049; /* Efecto al pasar el ratón sobre el botón */
+
+}
+
+.navbar {
+
+  display: flex;
+
+  justify-content: space-between; /* Elementos en los extremos con espacio entre ellos */
+
+  align-items: center; /* Alinear los elementos verticalmente */
+
+  padding: 10px 20px;
+
+  background-color: #333;
+
+  color: white;
+  
+
+
+}
+
+.nav-links {
+
+  display: flex;
+
+  gap: 15px; /* Espacio entre los enlaces */
+
+}
+
+.navbar a {
+
+  color: white; /* Enlaces en blanco para que resalten */
+
+  text-decoration: none; /* Quitar el subrayado */
+
+  padding: 0.5em 1em; /* Espacio alrededor de los enlaces */
+
+}
+
+.navbar a:hover {
+
+  background-color: #50c6ca; /* Efecto hover para resaltar los enlaces */
+
+  transition: 0.3s; /* Suavizar la transición del hover */
+border-radius: 5px;
+}
+
+.navbar img{
+    display: block;
+    width: 300px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 39px; 
+}
+
+header{
+    box-sizing: border-box;
+    background: rgba(218, 155, 20);
+    position: sticky;
+  top: 0;
+  left:0;
+  width: 100%;
+  z-index:1000;
+  border-radius: 20px;
+}
+
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+}
+
+/* Mostrar modal cuando se hace clic en el enlace */
+.modal:target {
+    display: block;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-decoration: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+
+.cerrar-modal:hover {
+    color: red;
+}
+
+a{
+    text-decoration: none;
+    
 }

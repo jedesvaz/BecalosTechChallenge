@@ -14,29 +14,29 @@
 </head>
 
 <body>
-    <header >
-        
-             <h1 class="changa-one-regular">Mascotas Río Grande</h1>
-        
-            <nav aria-label="Menú principal" id="navegador" class="div-generico" style="background-color: #f5f5dc00;">
+    <header>
+
+        <h1 class="changa-one-regular">Mascotas Río Grande</h1>
+
+        <nav aria-label="Menú principal" id="navegador" class="navbar" style="background-color: #f5f5dc00;">
             <a href="https://www.facebook.com/mascotasriograndemall" target="_blank" rel="noopener noreferrer"
-            aria-label="Ver producto 2"> <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5GYWikx5KCG4shM0yPdPOZ_wGSZa_iJm9lg&s"
-                alt="Mascota" loading="lazy" /> </a>
-            <ul>
-                
-                <li><a href="#inicio" class="changa-one-regular">Inicio</a></li>
-                <li><a href="#productos" class="changa-one-regular">Productos</a></li>
-                <li><a href="#servicios" class="changa-one-regular">Servicios</a></li>
-                <li><a href="#contacto" class="changa-one-regular">Contacto</a></li>
-                <li><a href="retos.html" class="changa-one-regular">Retos DEV.F</a></li>
-            </ul>
+                aria-label="Ver producto 2"> <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5GYWikx5KCG4shM0yPdPOZ_wGSZa_iJm9lg&s"
+                    alt="Mascota" loading="lazy" /> </a>
+            <div class="nav-links">
+
+                <a href="#inicio" class="changa-one-regular">Inicio</a>
+                <a href="#productos" class="changa-one-regular">Productos</a>
+                <a href="#servicios" class="changa-one-regular">Servicios</a>
+                <a href="#contacto" class="changa-one-regular">Contacto</a>
+                <a href="retos.html" class="changa-one-regular">Retos DEV.F</a>
+            </div>
 
         </nav>
-       
-        
-        
-        
+
+
+
+
     </header>
 
     <main>
@@ -85,24 +85,27 @@
                     <h3 class="changa-one-regular-italic">Ahorra hasta un 40%</h3>
                     <p>En todas las camas marcadas con etiqueta amarilla, en tieda y en línea</p>
                     <img src="https://img.freepik.com/foto-gratis/adorable-perrito-blanco_23-2148985894.jpg?semt=ais_hybrid&w=740&q=80"
-                       alt="cama para perro" loading="lazy" style="max-width:200px; max-height:200px;">
+                        alt="cama para perro" loading="lazy" style="max-width:200px; max-height:200px;">
                 </div>
 
                 <!-- DIV HIJO 5 -->
                 <div class="dato-mascota">
                     <h3 class="changa-one-regular-italic">Ahorra 20%</h3>
                     <p>En rascadores y muebles para gatos seleccionados</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/3_maciatka.png/250px-3_maciatka.png" loading="lazy"
-                        alt="rascador de gato" style="max-width:200px; max-height:200px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/3_maciatka.png/250px-3_maciatka.png"
+                        loading="lazy" alt="rascador de gato" style="max-width:200px; max-height:200px;">
                 </div>
 
             </div>
 
         </section>
         <section class="contenedor-principal" id="contacto" aria-labelledby="form-title">
-            <h2 id="form-title">Contáctanos </h2>
+            <h2 id="form-title">Contáctanos </h2> <button type="abrirModal"><a href="#formulario-contacto" class="changa-one-regular">Da clic aquí</a></button>
+           
 
-            <form class="formularios" id="contactForm" action="https://sheetdb.io/api/v1/13vb0rre5atlf" method="post">
+<!-- Modal -->
+<div id="formulario-contacto" class="modal">
+        <form class="formularios" id="contactForm" action="https://sheetdb.io/api/v1/13vb0rre5atlf" method="post">
                 <label for="nombre">Nombre completo</label>
                 <input type="text" id="nombre" name="Nombre" required placeholder="Tu nombre">
                 <br>
@@ -139,6 +142,9 @@
                 <p><b>Al enviar aceptas nuestra política de privacidad.</b></p>
                 <button type="submit">Enviar consulta</button>
             </form>
+    <a href="#" class="cerrar-modal">✖</a>
+</div>
+            
         </section>
 
 
@@ -175,6 +181,14 @@
                 <button type="submit">Saber Pokémon</button>
             </form>
         </section>
+        <div class="cookie-footer">
+
+            <p>Este sitio utiliza cookies para mejorar la experiencia. <a href="#cookies-policy">Más información</a>.
+            </p>
+
+            <button class="cookie-accept">Aceptar</button>
+
+        </div>
     </main>
 
     <footer>
