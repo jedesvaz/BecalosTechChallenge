@@ -232,24 +232,22 @@ section .contenedor-principal{
 
 }
 
-.cookie-footer button {
-
-  background-color: #4caf50; /* Verde para el botón */
-
-  color: white;
-
-  border: none;
-
-  padding: 0.5em 1em;
-
-  cursor: pointer;
-
+.cookie-accept {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.cookie-footer button:hover {
+.cookie-accept:hover {
+    background-color: #45a049;
+}
 
-  background-color: #45a049; /* Efecto al pasar el ratón sobre el botón */
-
+/* Ocultar el footer cuando el checkbox está marcado */
+#cookies-accepted:checked ~ .cookie-footer {
+    display: none;
 }
 
 .navbar {
@@ -348,5 +346,5 @@ header{
 
 a{
     text-decoration: none;
-    
+
 }
