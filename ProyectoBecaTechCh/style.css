@@ -126,11 +126,7 @@ button:hover {
     justify-content: center;
 }
 
-.div-generico img {
-    margin-top: 10px;
-    border-radius: 5px;
 
-}
 
 /* Estilos adicionales para mejor presentación */
 .contenedor-principal {
@@ -138,6 +134,11 @@ button:hover {
     margin: 0 auto;
     padding: 20px;
     font-family: Arial, sans-serif;    
+}
+.contenedor-principal img{
+     margin-top: 10px;
+    border-radius: 5px;
+    max-width: 100%;
 }
 
 .dato-mascota h3 {
@@ -363,7 +364,36 @@ a{
 
 }
 
+.gallery-container {
 
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 15px;
+
+}
+
+.gallery-item {
+
+  background-color: #f0f0f0;
+
+  padding: 20px;
+
+  text-align: center;
+
+  border-radius: 8px;
+  
+}
+.gallery-item p {
+
+  margin-top: 10px;
+
+  color: #333;
+
+  font-size: 20px;
+
+}
 
 /* Media queries para diseño responsivo  */
 
