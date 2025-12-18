@@ -390,6 +390,8 @@ a{
     align-items: center;
     width: 100%;
     font-size: 20px; 
+    align-items: stretch;
+    align-content: stretch;
 
   }
 
@@ -398,6 +400,8 @@ a{
     flex-direction: column; /* Apilamos los enlaces verticalmente */
 
     gap: 10px; /* Espacio entre los enlaces */
+    align-items: stretch;
+    align-content: stretch;
 
   }
 
@@ -409,6 +413,12 @@ header > h1 {
 .fixed {
     max-width: 150px;
 }
+
+.contenedor-principal {
+    align-content: stretch;
+    align-items: stretch;
+}
+
 
 
 
