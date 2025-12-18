@@ -81,6 +81,11 @@ button:hover {
 
 }
 
+#abrirModal{
+    font-size: 36px;
+    padding: 10px 20px
+}
+
 .box {
     width: 100px;
     height: 100px;
