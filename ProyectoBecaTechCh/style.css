@@ -9,6 +9,7 @@ body {
     font-family: "Changa One", sans-serif;
     font-weight: 400;
     font-style: normal;
+    margin: 0px 0px 0px
 }
 
 .changa-one-regular-italic {
@@ -26,7 +27,8 @@ main {
 nav {
     width: 70%;
     margin: 0px auto;
-   
+    margin-bottom: 0px;
+
 }
 
 nav ul li {
@@ -70,7 +72,7 @@ button {
     cursor: pointer;
     border-radius: 5px;
     transition: 0.3s;
-    
+
 
 }
 
@@ -81,7 +83,7 @@ button:hover {
 
 }
 
-#abrirModal{
+#abrirModal {
     font-size: 36px;
     padding: 10px 20px
 }
@@ -106,7 +108,7 @@ button:hover {
     background-color: #f9f9f9;
     text-align: center;
     justify-content: center;
-    max-width:300px;
+    max-width: 300px;
 }
 
 .formularios {
@@ -138,10 +140,11 @@ button:hover {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
-    font-family: Arial, sans-serif;    
+    font-family: Arial, sans-serif;
 }
-.contenedor-principal img{
-     margin-top: 10px;
+
+.contenedor-principal img {
+    margin-top: 10px;
     border-radius: 5px;
     max-width: 100%;
 }
@@ -181,6 +184,7 @@ button:hover {
     margin-top: 5px;
     padding: 10px 20px;
 }
+
 .fixed {
     box-sizing: border-box;
     padding-right: 5px;
@@ -199,7 +203,7 @@ button:hover {
 
 .sticky {
     position: sticky;
-    background-color:#2274a5;
+    background-color: #2274a5;
     color: #ddd;
     height: 50px;
     width: 250px;
@@ -211,7 +215,7 @@ button:hover {
 
 
 
-section .contenedor-principal{
+section .contenedor-principal {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -221,7 +225,7 @@ section .contenedor-principal{
 
 
 
-#contacto form{
+#contacto form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -230,25 +234,31 @@ section .contenedor-principal{
 
 .cookie-footer {
 
-  position: fixed; /* Siempre visible al final de la pantalla */
+    position: fixed;
+    /* Siempre visible al final de la pantalla */
 
-  bottom: 0; /* Pegado a la parte inferior */
+    bottom: 0;
+    /* Pegado a la parte inferior */
 
-  left: 0;
+    left: 0;
 
-  right: 0;
+    right: 0;
 
-  background-color: #222; /* Fondo oscuro para que destaque */
+    background-color: #222;
+    /* Fondo oscuro para que destaque */
 
-  color: #fff; /* Texto en blanco para buen contraste */
+    color: #fff;
+    /* Texto en blanco para buen contraste */
 
-  padding: 1em;
+    padding: 1em;
 
-  display: flex; /* Organiza el contenido de manera horizontal */
+    display: flex;
+    /* Organiza el contenido de manera horizontal */
 
-  justify-content: space-between; /* Espacia el texto y el botón */
+    justify-content: space-between;
+    /* Espacia el texto y el botón */
 
-  align-items: center;
+    align-items: center;
 
 }
 
@@ -266,75 +276,84 @@ section .contenedor-principal{
 }
 
 /* Ocultar el footer cuando el checkbox está marcado */
-#cookies-accepted:checked ~ .cookie-footer {
+#cookies-accepted:checked~.cookie-footer {
     display: none;
 }
 
 .navbar {
 
-  display: flex;
+    display: flex;
 
-  justify-content: space-between; /* Elementos en los extremos con espacio entre ellos */
+    justify-content: space-between;
+    /* Elementos en los extremos con espacio entre ellos */
 
-  align-items: center; /* Alinear los elementos verticalmente */
+    align-items: center;
+    /* Alinear los elementos verticalmente */
 
-  padding: 10px 20px;
+    padding: 0px 20px 0px;
 
-  background-color: #333;
+    background-color: #333;
 
-  color: white;
-  
+    color: white;
+
 
 
 }
 
 .nav-links {
 
-  display: flex;
+    display: flex;
 
-  gap: 15px; /* Espacio entre los enlaces */
+    gap: 15px;
+    /* Espacio entre los enlaces */
 
 }
 
 .navbar a {
 
-  color: white; /* Enlaces en blanco para que resalten */
+    color: white;
+    /* Enlaces en blanco para que resalten */
 
-  text-decoration: none; /* Quitar el subrayado */
+    text-decoration: none;
+    /* Quitar el subrayado */
 
-  padding: 0.5em 1em; /* Espacio alrededor de los enlaces */
+    padding: 0.5em 1em;
+    /* Espacio alrededor de los enlaces */
 
 }
 
 .navbar a:hover {
 
-  background-color: #50c6ca; /* Efecto hover para resaltar los enlaces */
+    background-color: #50c6ca;
+    /* Efecto hover para resaltar los enlaces */
 
-  transition: 0.3s; /* Suavizar la transición del hover */
-border-radius: 5px;
+    transition: 0.3s;
+    /* Suavizar la transición del hover */
+    border-radius: 5px;
 }
 
-.navbar img{
+.navbar img {
     display: block;
     width: 300px;
     max-width: 100%;
     object-fit: cover;
-    border-radius: 39px; 
+    border-radius: 39px;
 }
 
-header{
+header {
     box-sizing: border-box;
     background: rgba(218, 155, 20);
     position: sticky;
-  top: 0;
-  left:0;
-  width: 100%;
-  z-index:1000;
-  border-radius: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-radius: 20px;
 }
 
 .modal {
-    display: none; /* Oculto por defecto */
+    display: none;
+    /* Oculto por defecto */
     position: fixed;
     top: 50%;
     left: 50%;
@@ -364,39 +383,40 @@ header{
     color: red;
 }
 
-a{
+a {
     text-decoration: none;
 
 }
 
 .gallery-container {
 
-  display: grid;
+    display: grid;
 
-  grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
-  gap: 15px;
+    gap: 15px;
 
 }
 
 .gallery-item {
 
-  background-color: #f0f0f0;
+    background-color: #f0f0f0;
 
-  padding: 20px;
+    padding: 20px;
 
-  text-align: center;
+    text-align: center;
 
-  border-radius: 8px;
-  
+    border-radius: 8px;
+
 }
+
 .gallery-item p {
 
-  margin-top: 10px;
+    margin-top: 10px;
 
-  color: #333;
+    color: #333;
 
-  font-size: 20px;
+    font-size: 20px;
 
 }
 
@@ -404,94 +424,101 @@ a{
 
 @media (max-width: 600px) {
 
-  body {
+    body {
 
-    font-size: 16px; 
-    text-align: center;
-
-
-    /* Header y navbar */
-  }
-  header {
-    width: 100%;
-    position: static;
-  }
-
-  .navbar {
-
-    flex-direction: column; 
-    align-items: center;
-
-    align-items: center;
-    width: 100%;
-    font-size: 20px; 
-    align-items: stretch;
-    align-content: stretch;
-
-  }
-
-  .nav-links {
-
-    flex-direction: column; /* Apilamos los enlaces verticalmente */
-
-    gap: 10px; /* Espacio entre los enlaces */
-    align-items: stretch;
-    align-content: stretch;
-
-  }
-
-header > h1 {
-    display:none;
-}
-  
-/* Body  */
-.fixed {
-    max-width: 150px;
-}
-
-.contenedor-principal {
-    align-content: stretch;
-    align-items: stretch;
-}
+        font-size: 16px;
+        text-align: center;
 
 
+        /* Header y navbar */
+    }
+
+    header {
+        width: 100%;
+        position: static;
+    }
+
+    .navbar {
+
+        flex-direction: column;
+        align-items: center;
+
+        align-items: center;
+        width: 100%;
+        font-size: 20px;
+        align-items: stretch;
+        align-content: stretch;
+
+    }
+
+    .nav-links {
+
+        flex-direction: column;
+        /* Apilamos los enlaces verticalmente */
+
+        gap: 10px;
+        /* Espacio entre los enlaces */
+        align-items: stretch;
+        align-content: stretch;
+
+    }
+
+    header>h1 {
+        display: none;
+    }
+
+    /* Body  */
+    .fixed {
+        max-width: 150px;
+    }
+
+    .contenedor-principal {
+        align-content: stretch;
+        align-items: stretch;
+    }
 
 
-.dato-mascota{
-    
-    width: 90%;
-    
-}
+
+
+    .dato-mascota {
+
+        width: 90%;
+
+    }
 }
 
 @media (min-width: 600px) and (max-width: 1024px) {
 
-  body {
+    body {
 
-    font-size: 18px; /* Tamaño de fuente un poco mayor, adaptado a pantallas medianas */
+        font-size: 18px;
+        /* Tamaño de fuente un poco mayor, adaptado a pantallas medianas */
 
-  }
+    }
 
-  .navbar {
+    .navbar {
 
-    flex-direction: row; /* Volvemos la navegación a horizontal */
+        flex-direction: row;
+        /* Volvemos la navegación a horizontal */
 
-    justify-content: space-around;
+        justify-content: space-around;
 
-  }
+    }
 
-  .sidebar {
+    .sidebar {
 
-    display: block; /* Mostramos la barra lateral, pero la mantenemos accesoria */
+        display: block;
+        /* Mostramos la barra lateral, pero la mantenemos accesoria */
 
-    width: 30%;
+        width: 30%;
 
-  }
+    }
 
-  .main-content {
+    .main-content {
 
-    width: 70%; /* Ajustamos el ancho del contenido principal */
+        width: 70%;
+        /* Ajustamos el ancho del contenido principal */
 
-  }
+    }
 
 }
