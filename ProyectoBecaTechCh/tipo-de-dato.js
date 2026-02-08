@@ -1,0 +1,15 @@
+console.log(42, typeof 42)
+console.log('Veinticinco', typeof 'Veinticinco')
+console.log(-666, typeof -666)
+console.log(true, typeof true)
+// adición propia
+console.log('True', typeof True)
+console.log(0, typeof 0)
+console.log('', typeof '')
+console.log(null, typeof null)
+console.log(undefined, typeof undefined)
+console.log('FALSE', typeof FALSE)
+//adiciones propias
+console.log('False', typeof False)
+console.log(false, typeof false)
+console.log(Array, typeof Array)
