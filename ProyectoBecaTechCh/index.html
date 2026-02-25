@@ -25,7 +25,7 @@
                     alt="Mascota" loading="lazy" /> </a>
             <div class="nav-links">
 
-                
+
                 <a href="#productos" class="changa-one-regular">Productos</a>
                 <a href="#servicios" class="changa-one-regular">Servicios</a>
                 <a href="#contacto" class="changa-one-regular">Ubicación</a>
@@ -100,8 +100,8 @@
 
         </section>
         <section class="contenedor-principal" id="contacto" aria-labelledby="form-title">
-            <h2 id="form-title">Contáctanos </h2> <button id="abrirModal" type="abrirModal"><a href="#formulario-contacto"
-                    class="changa-one-regular">Da clic aquí</a></button>
+            <h2 id="form-title">Contáctanos </h2> <button id="abrirModal" type="abrirModal"><a
+                    href="#formulario-contacto" class="changa-one-regular">Da clic aquí</a></button>
 
 
             <!-- Modal -->
@@ -148,9 +148,29 @@
             </div>
 
         </section>
+        <section class="contenedor-principal">
+            <h2>Comentarios</h2>
+            <p class="subtitulo">Deja tu comentario y únete a la conversación</p>
+            <form class="formularios" id="comentarios">
+                <label for="nombre">Nombre de usuario</label>
+                <input type="text" id="nombreEnComentarios" name="Nombre" required placeholder="Tu nombre">
+                <br>
 
 
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensajeEnComentarios" name="Mensaje" rows="6"
+                    placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
 
+                <p><b>Al enviar aceptas nuestra política de privacidad.</b></p>
+                <button type="submit" id="botonComentarios">Enviar comentario</button>
+            </form>
+            <div id="espacioParaComentarios">
+                <h2>📬 Buzón de Comentarios</h2>
+
+                <hr>
+                <div id="seccionDeComentarios"></div>
+            </div>
+        </section>
         <section class="contenedor-principal" id="productos">
             <h2>Productos destacados ¡DALES CLIC!</h2>
             <div class="div-generico">
@@ -173,29 +193,53 @@
             <h2>Productos por mascota</h2>
             <div class="gallery-container">
 
-  <div class="gallery-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1CdgLvpEY_bDIP2vvT0LKeBmoIWpvnA4_L_KmgquW0QrlpGKgDoYhhwOuFFgNUDWBXIJKpfWEafbspHSLrpm9aDI8ycrvHPuJYZ_hTA&s=10"
-                        alt="ProductosPerro" loading="lazy" /><p class="changa-one-regular">Perros</p></div>
+                <div class="gallery-item"><img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1CdgLvpEY_bDIP2vvT0LKeBmoIWpvnA4_L_KmgquW0QrlpGKgDoYhhwOuFFgNUDWBXIJKpfWEafbspHSLrpm9aDI8ycrvHPuJYZ_hTA&s=10"
+                        alt="ProductosPerro" loading="lazy" />
+                    <p class="changa-one-regular">Perros</p>
+                </div>
 
-  <div class="gallery-item"><img src="https://static9.depositphotos.com/1594920/1088/i/450/depositphotos_10886432-stock-photo-group-of-5-cats-in.jpg"
-                        alt="ProductosGato" loading="lazy" /><p class="changa-one-regular">Gatos</p></div>
-  <div class="gallery-item"><img src="https://cosasdemascotas.net/wp-content/uploads/2020/07/acuario-pez-dorado-02.jpg"
-                        alt="ProductosPeces" loading="lazy" /><p class="changa-one-regular">Peces</p></div>
+                <div class="gallery-item"><img
+                        src="https://static9.depositphotos.com/1594920/1088/i/450/depositphotos_10886432-stock-photo-group-of-5-cats-in.jpg"
+                        alt="ProductosGato" loading="lazy" />
+                    <p class="changa-one-regular">Gatos</p>
+                </div>
+                <div class="gallery-item"><img
+                        src="https://cosasdemascotas.net/wp-content/uploads/2020/07/acuario-pez-dorado-02.jpg"
+                        alt="ProductosPeces" loading="lazy" />
+                    <p class="changa-one-regular">Peces</p>
+                </div>
 
-  <div class="gallery-item"><img src="https://infomascota.com/wp-content/uploads/2023/11/cobayasyconejos.jpg"
-                        alt="ProductosConejos" loading="lazy" /><p class="changa-one-regular">Cuyos y Conejos</p></div>
-  <div class="gallery-item"><img src="https://img.freepik.com/fotos-premium/hamster-blanco-gris-sus-manos-sobre-fondo-blanco-copypaste_300468-60.jpg"
-                        alt="ProductosHamsters" loading="lazy" /><p class="changa-one-regular">Hámsters</p></div>
+                <div class="gallery-item"><img
+                        src="https://infomascota.com/wp-content/uploads/2023/11/cobayasyconejos.jpg"
+                        alt="ProductosConejos" loading="lazy" />
+                    <p class="changa-one-regular">Cuyos y Conejos</p>
+                </div>
+                <div class="gallery-item"><img
+                        src="https://img.freepik.com/fotos-premium/hamster-blanco-gris-sus-manos-sobre-fondo-blanco-copypaste_300468-60.jpg"
+                        alt="ProductosHamsters" loading="lazy" />
+                    <p class="changa-one-regular">Hámsters</p>
+                </div>
 
-  <div class="gallery-item"><img src="https://img.freepik.com/fotos-premium/par-periquitos-australianos-aislado-blanco_856373-6.jpg"
-                        alt="ProductosAves" loading="lazy" /><p class="changa-one-regular">Aves</p></div>
+                <div class="gallery-item"><img
+                        src="https://img.freepik.com/fotos-premium/par-periquitos-australianos-aislado-blanco_856373-6.jpg"
+                        alt="ProductosAves" loading="lazy" />
+                    <p class="changa-one-regular">Aves</p>
+                </div>
 
-  <div class="gallery-item"><img src="https://media.istockphoto.com/id/178369516/es/foto/la-tortuga.jpg?s=612x612&w=0&k=20&c=ShDsmTui-CfHvaVvc2uRgQobL4naWkpfjVZMS0IPwGM="
-                        alt="ProductosReptiles" loading="lazy" /><p class="changa-one-regular">Reptiles</p></div>
+                <div class="gallery-item"><img
+                        src="https://media.istockphoto.com/id/178369516/es/foto/la-tortuga.jpg?s=612x612&w=0&k=20&c=ShDsmTui-CfHvaVvc2uRgQobL4naWkpfjVZMS0IPwGM="
+                        alt="ProductosReptiles" loading="lazy" />
+                    <p class="changa-one-regular">Reptiles</p>
+                </div>
 
-  <div class="gallery-item"><img src="https://img.pikbest.com/wp/202345/color-difference-five-chickens-in-different-colors-standing-against-a-white-background_9612171.jpg!sw800"
-                        alt="ProductosOtros" loading="lazy" /><p class="changa-one-regular">Otros</p></div>
+                <div class="gallery-item"><img
+                        src="https://img.pikbest.com/wp/202345/color-difference-five-chickens-in-different-colors-standing-against-a-white-background_9612171.jpg!sw800"
+                        alt="ProductosOtros" loading="lazy" />
+                    <p class="changa-one-regular">Otros</p>
+                </div>
 
-</div>
+            </div>
 
             <p>Próximamente: lista de productos y promociones.</p>
         </section>
@@ -239,6 +283,83 @@
 </html>
 
 <script>
+    let botonComentarios = document.getElementById('botonComentarios');
+    botonComentarios.addEventListener('click', function () {
+        event.preventDefault(); // evita la recarga
+        let comentario = document.getElementById('mensajeEnComentarios');
+        let nombre = document.getElementById('nombreEnComentarios');
+        console.log(comentario.value);
+        if (comentario.value.trim() !== '' && nombre.value.trim() !== '') {
+
+            // //Definición de hora y fecha
+            let fechaHora = new Date();
+            // // Primero seleccionas el section
+            let seccionComentarios = document.querySelector('#seccionDeComentarios');
+
+            // // Luego creas el elemento (createElement va siempre en document)
+            // let nuevoComentario = document.createElement('p');
+            // let botonEliminar = document.createElement('button');
+            // botonEliminar.textContent = '🗑Eliminar';
+            // botonEliminar.addEventListener('click', function () {
+            //     nuevoComentario.remove();
+            // });
+            // // Le asignas el texto al nuevo elemento
+            // nuevoComentario.textContent = nombre.value + ': ' + comentario.value + ', ' + fechaHora.toLocaleString();
+            // console.log(fechaHora); // Wed Feb 25 2026 10:30:00
+
+            // // Y lo agregas al section
+            // seccionComentarios.appendChild(nuevoComentario);
+            // // Agregar el botón de eliminar al nuevo comentario
+            // nuevoComentario.appendChild(botonEliminar);
+            
+            // Contenedor del comentario
+            let nuevoComentario = document.createElement('div');
+            nuevoComentario.classList.add('comentario-card');
+
+            // Nombre en negritas
+            let nombreElement = document.createElement('strong');
+            nombreElement.textContent = nombre.value;
+
+            // Texto del comentario
+            let textoElement = document.createElement('p');
+            textoElement.textContent = comentario.value;
+
+            // Fecha y hora
+            let fechaElement = document.createElement('span');
+            fechaElement.textContent = fechaHora.toLocaleString();
+            fechaElement.classList.add('comentario-fecha');
+
+            // Botón eliminar
+            let botonEliminar = document.createElement('button');
+            botonEliminar.textContent = '🗑 Eliminar';
+            botonEliminar.addEventListener('click', function () {
+                nuevoComentario.remove();
+            });
+
+            // Fila inferior: fecha + botón
+            let filaNombre = document.createElement('div');
+            filaNombre.classList.add('comentario-footer');
+            filaNombre.appendChild(fechaElement);
+            filaNombre.appendChild(botonEliminar);
+
+            // Ensamblar todo
+            nuevoComentario.appendChild(nombreElement);
+            nuevoComentario.appendChild(textoElement);
+            nuevoComentario.appendChild(filaNombre);
+
+            seccionComentarios.appendChild(nuevoComentario);
+            comentario.value = '';
+            nombre.value = '';
+
+        } else {
+            alert('Por favor, ingresa un comentario antes de enviar.');
+        }
+    });
+
+
+
+
+
     // Envía el formulario por AJAX y luego redirige al inicio (#inicio)
     document.addEventListener('DOMContentLoaded', function () {
         var form = document.getElementById('contactForm');

@@ -522,3 +522,142 @@ a {
     }
 
 }
+
+/* Espacio para comentarios */
+#espacioParaComentarios {
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 24px;
+  /* max-width: 600px; */
+  /* margin: 20px auto; */
+  /* font-family: Georgia, serif; */
+}
+
+#espacioParaComentarios h2 {
+  font-size: 1.4rem;
+  margin: 0 0 6px 0;
+  color: #222;
+}
+
+#espacioParaComentarios p.subtitulo {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0 0 20px 0;
+}
+
+#espacioParaComentarios hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+#seccionDeComentarios {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Formato Formulario Comentarios */
+#comentarios {
+  background-color: rgb(195, 222, 211);
+  border-radius: 12px;
+  padding: 28px;
+  /* max-width: 500px; */
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#comentarios label {
+  font-weight: bold;
+  color: #3a5a50;
+  margin-bottom: 2px;
+}
+
+#comentarios input,
+#comentarios textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  outline: none;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.07);
+}
+
+#comentarios input:focus,
+#comentarios textarea:focus {
+  box-shadow: 0px 0px 0px 2px rgb(222, 150, 150);
+}
+
+#comentarios p {
+  font-size: 0.8rem;
+  color: #3a5a50;
+  margin: 0;
+}
+
+#botonComentarios {
+  background-color: rgb(222, 150, 150);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#botonComentarios:hover {
+  background-color: rgb(210, 120, 120);
+}
+
+/* Formato de comentarios */
+.comentario-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 12px 16px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.comentario-card strong {
+    font-size: 0.95rem;
+    color: #3a5a50;
+}
+
+.comentario-card p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: #333;
+}
+
+.comentario-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.comentario-fecha {
+    font-size: 0.78rem;
+    color: #999;
+}
+
+.comentario-card button {
+    background: none;
+    border: none;
+    color: #bbb;
+    font-size: 0.78rem;
+    cursor: pointer;
+}
+
+.comentario-card button:hover {
+    color: rgb(222, 150, 150);
+}
