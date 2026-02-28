@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Retos</title>
 </head>
 
@@ -94,6 +95,29 @@
         <button id="generarContra">Generar contraseña</button>
 
     </div>
+    <section class="contenedor-principal">
+            <h2>Comentarios</h2>
+            <p class="subtitulo">Deja tu comentario y únete a la conversación</p>
+            <form class="formularios" id="comentarios">
+                <label for="nombre">Nombre de usuario</label>
+                <input type="text" id="nombreEnComentarios" name="Nombre" required placeholder="Tu nombre">
+                <br>
+
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensajeEnComentarios" name="Mensaje" rows="6"
+                    placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
+
+                <p><b>Al enviar aceptas nuestra política de privacidad.</b></p>
+                <button type="submit" id="botonComentarios">Enviar comentario</button>
+            </form>
+            <div id="espacioParaComentarios">
+                <h2>📬 Buzón de Comentarios</h2>
+
+                <hr>
+                <div id="seccionDeComentarios"></div>
+            </div>
+        </section>
 
 </body>
 
@@ -183,6 +207,84 @@
             .then(() => console.log("Contraseña copiada"))
             .catch(err => console.error("Error:", err));
     });
+
+
+
+let botonComentarios = document.getElementById('botonComentarios');
+    botonComentarios.addEventListener('click', function () {
+        event.preventDefault(); // evita la recarga
+        let comentario = document.getElementById('mensajeEnComentarios');
+        let nombre = document.getElementById('nombreEnComentarios');
+        console.log(comentario.value);
+        if (comentario.value.trim() !== '' && nombre.value.trim() !== '') {
+
+            // //Definición de hora y fecha
+            let fechaHora = new Date();
+            // // Primero seleccionas el section
+            let seccionComentarios = document.querySelector('#seccionDeComentarios');
+
+            // // Luego creas el elemento (createElement va siempre en document)
+            // let nuevoComentario = document.createElement('p');
+            // let botonEliminar = document.createElement('button');
+            // botonEliminar.textContent = '🗑Eliminar';
+            // botonEliminar.addEventListener('click', function () {
+            //     nuevoComentario.remove();
+            // });
+            // // Le asignas el texto al nuevo elemento
+            // nuevoComentario.textContent = nombre.value + ': ' + comentario.value + ', ' + fechaHora.toLocaleString();
+            // console.log(fechaHora); // Wed Feb 25 2026 10:30:00
+
+            // // Y lo agregas al section
+            // seccionComentarios.appendChild(nuevoComentario);
+            // // Agregar el botón de eliminar al nuevo comentario
+            // nuevoComentario.appendChild(botonEliminar);
+            
+            // Contenedor del comentario
+            let nuevoComentario = document.createElement('div');
+            nuevoComentario.classList.add('comentario-card');
+
+            // Nombre en negritas
+            let nombreElement = document.createElement('strong');
+            nombreElement.textContent = nombre.value;
+
+            // Texto del comentario
+            let textoElement = document.createElement('p');
+            textoElement.textContent = comentario.value;
+
+            // Fecha y hora
+            let fechaElement = document.createElement('span');
+            fechaElement.textContent = fechaHora.toLocaleString();
+            fechaElement.classList.add('comentario-fecha');
+
+            // Botón eliminar
+            let botonEliminar = document.createElement('button');
+            botonEliminar.textContent = '🗑 Eliminar';
+            botonEliminar.addEventListener('click', function () {
+                nuevoComentario.remove();
+            });
+
+            // Fila inferior: fecha + botón
+            let filaNombre = document.createElement('div');
+            filaNombre.classList.add('comentario-footer');
+            filaNombre.appendChild(fechaElement);
+            filaNombre.appendChild(botonEliminar);
+
+            // Ensamblar todo
+            nuevoComentario.appendChild(nombreElement);
+            nuevoComentario.appendChild(textoElement);
+            nuevoComentario.appendChild(filaNombre);
+
+            seccionComentarios.appendChild(nuevoComentario);
+            comentario.value = '';
+            nombre.value = '';
+
+        } else {
+            alert('Por favor, ingresa un comentario antes de enviar.');
+        }
+    });
+
+
+
 
 
 
