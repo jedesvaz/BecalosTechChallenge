@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retos</title>
 </head>
+
 <body>
     <h1>Retos </h1>
 
@@ -24,10 +26,11 @@
     </ul>
     <h3>Tarjeta 1</h3>
     <div id="tarjeta1">
-        <img src="https://images.squarespace-cdn.com/content/v1/5d77a7f8ad30356d21445262/1695000300830-5TKAFHC2EBYTTM2QUWUP/fotos-de-perfil-blanco-y-negro.jpg" alt="fotoperfil" id="fotoperfil">
+        <img src="https://images.squarespace-cdn.com/content/v1/5d77a7f8ad30356d21445262/1695000300830-5TKAFHC2EBYTTM2QUWUP/fotos-de-perfil-blanco-y-negro.jpg"
+            alt="fotoperfil" id="fotoperfil">
         <h3 class="titulosTrajetas">Jessica Randall</h3>
         <p class="textotarjetas" style="color: rgb(195, 229, 77);">London, United Kingdom</p>
-        <p class="textotarjetas" >"Front-end developer and avid reader"</p>
+        <p class="textotarjetas">"Front-end developer and avid reader"</p>
         <button class="botonesContacto">Github</button>
         <button class="botonesContacto">Frontend Mentor</button>
         <button class="botonesContacto">LinkedIn</button>
@@ -41,18 +44,19 @@
         <li>No buscamos ahorita que quede idéntica, solo que se vea similar.</li>
         <ul>
             <li>Evita animaciones (vamos paso a paso)</li>
-                <li>No pagues por fuentes</li>
-                <li>¿Por dónde iniciar?, ¿Cómo divido el trabajo?, ¿Qué tienen en común estas tarjetas?</li>
+            <li>No pagues por fuentes</li>
+            <li>¿Por dónde iniciar?, ¿Cómo divido el trabajo?, ¿Qué tienen en común estas tarjetas?</li>
         </ul>
 
     </ul>
     <h3>Tarjeta avanzada 1</h3>
     <div id="tarjetaavanzada1">
-        
+
         <div id="subtarjetaavanzada1">
             <p>♥</p>
         </div>
-        <img src="https://e7.pngegg.com/pngimages/613/947/png-clipart-god-of-war-ascension-kratos-atreus-ares-god-of-war-video-game-playstation-4-thumbnail.png" alt="kratos">
+        <img src="https://e7.pngegg.com/pngimages/613/947/png-clipart-god-of-war-ascension-kratos-atreus-ares-god-of-war-video-game-playstation-4-thumbnail.png"
+            alt="kratos">
         <br>
         <h5>Kratos and Artreus Statue - God of War</h5>
         <p>Departure date: 31/03/2021</p>
@@ -60,16 +64,282 @@
         <h5>$599</h5>
     </div>
 
+    <div class="generadorDeContra">
+        <h3>Generador de Contraseñas</h3>
+        <div class="output">
+            <span class="contrasenaGenerada">P4$5W0rD!</span>
+            <button id="copiarContra">Copiar</button>
+
+        </div>
+        <label>Character Length <span id="lengthValue">0</span></label>
+        <input type="range" id="longituddeContra" min="1" max="20" value="0" />
+        <input type="checkbox" id="incluirMayusculas">
+        <label for="incluirMayusculas">Incluir Mayúsculas</label>
+        <input type="checkbox" id="incluirMinusculas">
+        <label for="incluirMinusculas">Incluir Minúsculas</label>
+        <input type="checkbox" id="incluirNumeros">
+        <label for="incluirNumeros">Incluir Números</label>
+        <input type="checkbox" id="incluirSimbolos">
+        <label for="incluirSimbolos">Incluir Símbolos</label>
+        <div class="barraFortaleza">
+            <span>Fortaleza</span>
+            <div class="indicadores">
+                <span id="textoFortaleza"></span>
+                <div class="bloque" id="bloque1"></div>
+                <div class="bloque" id="bloque2"></div>
+                <div class="bloque" id="bloque3"></div>
+                <div class="bloque" id="bloque4"></div>
+            </div>
+        </div>
+        <button id="generarContra">Generar contraseña</button>
+
+    </div>
+
 </body>
+
 </html>
+<script>
+    let sliderContra = document.getElementById('longituddeContra');
+    let lengthValue = document.getElementById('lengthValue');
+    let spanContrasenaGenerada = document.querySelector(".contrasenaGenerada");
+
+
+    const MAYUSCULAS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const MINUSCULAS = 'abcdefghijklmnopqrstuvwxyz';
+    const NUMEROS = '0123456789';
+    const SIMBOLOS = '!@#$%^&*()_+-=[]{}|;:,.<>?';
+    const checkMayusculas = document.getElementById("incluirMayusculas");
+    const checkMinusculas = document.getElementById("incluirMinusculas");
+    const checkNumeros = document.getElementById("incluirNumeros");
+    const checkSimbolos = document.getElementById("incluirSimbolos");
+
+
+
+    sliderContra.addEventListener("input", function () {
+        lengthValue.textContent = this.value;
+    });
+    const generarContrasena = () => {
+
+        let catalogoCaracteres = "";
+
+       
+
+        if (checkMayusculas.checked) {
+            catalogoCaracteres += MAYUSCULAS;
+        }
+        if (checkMinusculas.checked) {
+            catalogoCaracteres += MINUSCULAS;
+        }
+        if (checkNumeros.checked) {
+            catalogoCaracteres += NUMEROS;
+        }
+        if (checkSimbolos.checked) {
+            catalogoCaracteres += SIMBOLOS;
+        } else {
+            console.log("No está activado");
+        }
+        let contrasena = "";
+        for (let i = 0; i < sliderContra.value; i++) {
+            let indice = Math.floor(Math.random() * catalogoCaracteres.length);
+            contrasena += catalogoCaracteres[indice];
+        }
+        console.log(contrasena);
+        spanContrasenaGenerada.textContent = contrasena;
+        evaluarFortaleza();
+    };
+
+
+    const evaluarFortaleza = () => {
+        let cantidad = [checkMayusculas, checkMinusculas, checkNumeros, checkSimbolos]
+            .filter(check => check.checked).length;
+        let longitud = parseInt(sliderContra.value);
+
+        let nivel = 0;
+        if (longitud >= 6 && cantidad >= 1) nivel = 1;
+        if (longitud >= 8 && cantidad >= 2) nivel = 2;
+        if (longitud >= 12 && cantidad >= 3) nivel = 3;
+        if (longitud >= 16 && cantidad === 4) nivel = 4;
+
+        const etiquetas = ['', 'DÉBIL', 'REGULAR', 'BUENA', 'FUERTE'];
+        const clases = ['', 'debil', 'regular', 'buena', 'fuerte'];
+
+        let textoFortaleza = document.getElementById('textoFortaleza');
+        textoFortaleza.textContent = etiquetas[nivel];
+
+        for (let i = 1; i <= 4; i++) {
+            let bloque = document.getElementById('bloque' + i);
+            bloque.className = 'bloque';
+            if (i <= nivel) bloque.classList.add(clases[nivel]);
+        }
+    };
+
+    let botonGenerar = document.getElementById("generarContra");
+    botonGenerar.addEventListener("click", generarContrasena);
+    let botonCopiar = document.getElementById("copiarContra");
+
+    botonCopiar.addEventListener("click", () => {
+        let contrasena = spanContrasenaGenerada.textContent;
+        navigator.clipboard.writeText(contrasena)
+            .then(() => console.log("Contraseña copiada"))
+            .catch(err => console.error("Error:", err));
+    });
+
+
+
+</script>
 <style>
+    .generadorDeContra {
+    background-color: #404042;
+    padding: 24px;
+    max-width: 480px;
+    color: #e6e5ea;
+}
+.output {
+    background-color: #18191f;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.contrasenaGenerada {
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    color: #e6e5ea;
+}
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #18191f;
+    outline: none;
+    cursor: pointer;
+    display: block;
+    margin: 8px 0 16px 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #e6e5ea;
+    cursor: pointer;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+    background: #a4ffaf;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+
+label::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 2px solid #817d92;
+    flex-shrink: 0;
+    display: block;
+}
+
+input[type="checkbox"]:checked + label::before {
+    background-color: #a4ffaf;
+    border-color: #a4ffaf;
+}
+
+.barraFortaleza {
+    background-color: #18191f;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 0;
+}
+
+.indicadores {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.bloque {
+    width: 10px;
+    height: 28px;
+    border: 2px solid #817d92;
+}
+    .bloque {
+    width: 10px;
+    height: 28px;
+    border: 2px solid #817d92;
+}
+
+#generarContra {
+    width: 100%;
+    padding: 18px;
+    background-color: #a4ffaf;
+    color: #18191f;
+    border: none;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#generarContra:hover {
+    background-color: #18191f;
+    color: #a4ffaf;
+    outline: 2px solid #a4ffaf;
+}
+#copiarContra {
+    background: none;
+    border: none;
+    color: #a4ffaf;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+#copiarContra:hover {
+    color: #ffffff;
+}
+    .bloque.debil {
+        background-color: #f64a4a;
+    }
+
+    .bloque.regular {
+        background-color: #fb7c58;
+    }
+
+    .bloque.buena {
+        background-color: #f8cd65;
+    }
+
+    .bloque.fuerte {
+        background-color: #a4ffaf;
+    }
+
     #tarjeta1 {
         box-sizing: border-box;
         width: 230px;
         height: 368px;
         border: 2px solid black;
         border-radius: 15px;
-        
+
         padding: 20px;
         margin: 20px;
         font-family: Arial, sans-serif;
@@ -77,18 +347,21 @@
         text-align: center;
         color: aliceblue;
     }
-    #tarjeta1 p{
+
+    #tarjeta1 p {
         margin: 5px 0;
         font-size: 10px;
     }
-    #fotoperfil{
+
+    #fotoperfil {
         width: 50px;
         height: 50px;
         border-radius: 50%;
         object-fit: cover;
         margin: 0 auto 15px auto;
     }
-    .botonesContacto{
+
+    .botonesContacto {
         box-sizing: border-box;
         background-color: rgb(51, 51, 51);
         color: aliceblue;
@@ -108,35 +381,39 @@
         width: 139px;
         height: 197px;
         border-radius: 5px;
-        
+
         /* padding: 20px; */
         margin: 20px;
         font-family: Arial, sans-serif;
         background-color: #ddd;
         color: aliceblue;
     }
+
     #subtarjetaavanzada1 {
         box-sizing: border-box;
         width: 139px;
         height: 83px;
         text-align: right;
         border-radius: 5px;
-        
-        
-        
+
+
+
         background-color: #af4a4a;
         color: aliceblue;
     }
-    #tarjetaavanzada1 img{
-        
+
+    #tarjetaavanzada1 img {
+
         position: absolute;
-    top: 30%;           
-    left: 50%;          
-    transform: translate(-50%, -50%); 
-    width: 80px;      
-    z-index: 10;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        z-index: 10;
     }
-    #tarjetaavanzada1 p, #tarjetaavanzada1 h5{
+
+    #tarjetaavanzada1 p,
+    #tarjetaavanzada1 h5 {
         margin: 5px 10px;
         font-size: 10px;
         color: black;
