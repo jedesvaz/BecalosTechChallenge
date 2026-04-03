@@ -36,3 +36,44 @@ export const mostrarItinerario = () => {
         console.log("---------------------------");
     }
 }
+
+
+
+//PRACTICA: ESTRUCTURA DE DATOS
+
+export let listaDeCompras = new Set();
+
+export const agregarProducto = (listaDeCompras, producto) => {
+    listaDeCompras.add(producto);
+} 
+
+export const eliminarProducto = (listaDeCompras, producto) => {
+    listaDeCompras.delete(producto);
+}
+
+export const mostrarLista = (listaDeCompras) => {
+    console.log("Lista de Compras:");
+    listaDeCompras.forEach(producto => {
+        console.log("- " + producto);
+    });
+}
+
+
+//PRACTICA: MÉTODOS DE ARREGLOS
+export const menosDeCienF = (arregloConObjetos) => {
+    return arregloConObjetos.filter(producto => producto.precio < 100);
+    
+};
+
+
+export const ordenarListaporOrdenAlfa = (arreglo) => {
+    arreglo.sort((producto1, producto2) => {
+    if(producto1.nombre < producto2.nombre) return -1;
+    if(producto1.nombre > producto2.nombre) return 1;
+    return 0;
+});
+};
+
+export const soloNombresF = (arregloConObjetos) =>{
+    return arregloConObjetos.map(producto => producto.nombre);
+};

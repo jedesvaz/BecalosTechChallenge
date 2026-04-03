@@ -241,22 +241,9 @@
 
 //PRACTICA: ESTRUCTURA DE DATOS
 
+import {agregarProducto, eliminarProducto, mostrarLista} from './modulos.js'; //Importación de las funciones desde el modulos.js
+
 let listaDeCompras = new Set();
-
-const agregarProducto = (listaDeCompras, producto) => {
-    listaDeCompras.add(producto);
-} 
-
-const eliminarProducto = (listaDeCompras, producto) => {
-    listaDeCompras.delete(producto);
-}
-
-const mostrarLista = (listaDeCompras) => {
-    console.log("Lista de Compras:");
-    listaDeCompras.forEach(producto => {
-        console.log("- " + producto);
-    });
-}
 
 agregarProducto(listaDeCompras, "Leche");
 agregarProducto(listaDeCompras, "Pan");
