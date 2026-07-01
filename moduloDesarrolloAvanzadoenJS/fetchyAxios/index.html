@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consumo de APIs - PokéAPI</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #e63946;
+    }
+
+    .buttons {
+      margin: 20px 0;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      color: white;
+    }
+
+    #fetch-btn {
+      background-color: #457b9d;
+    }
+
+    #axios-btn {
+      background-color: #e63946;
+    }
+
+    #data-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .pokemon-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 10px;
+      width: 120px;
+      text-align: center;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .pokemon-card img {
+      width: 96px;
+      height: 96px;
+    }
+
+    .pokemon-card h3 {
+      font-size: 14px;
+      margin: 5px 0 0;
+      text-transform: capitalize;
+    }
+
+    #status {
+      margin: 10px 0;
+      font-style: italic;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pokédex</h1>
+  <p>Obtén los primeros 20 Pokémon usando Fetch o Axios</p>
+
+  <div class="buttons">
+    <button id="fetch-btn">Obtener con Fetch</button>
+    <button id="axios-btn">Obtener con Axios</button>
+  </div>
+
+  <p id="status"></p>
+  <div id="data-container"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
