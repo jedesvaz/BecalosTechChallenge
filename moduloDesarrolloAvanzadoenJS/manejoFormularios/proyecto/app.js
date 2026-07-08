@@ -5,6 +5,17 @@ document
 
     // Variables
     const nombre = document.getElementById("nombre").value;
+    const correo = document.getElementById("correo").value;
+    const telefono = document.getElementById("telefono").value;
+    const horario = document.querySelector('input[name="horario"]:checked');
+    const fecha = document.getElementById("fecha").value;
+    const hora = document.getElementById("hora").value;
+    const archivo = document.getElementById("archivo").files[0];
+    const intereses = document.querySelectorAll(
+      'input[name="intereses"]:checked',
+    );
+    // Validaciones
+    // Validación de nombre: solo letras y mínimo 3 caracteres
     if (
       !/^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]+$/.test(nombre) ||
       nombre.trim().length < 3
@@ -14,16 +25,12 @@ document
       );
       return;
     }
-    const correo = document.getElementById("correo").value;
+    // Validación de correo: debe contener "@" y "."
     if (!correo.includes("@") || !correo.includes(".")) {
       alert("Introduce un correo válido.");
       return;
     }
-    // correo.addEventListener("invalid", (event) => {
-    //   event.preventDefault(); // cancela el mensaje del navegador
-    //   alert("Por favor, introduce un correo electrónico válido.");
-    // });
-    const telefono = document.getElementById("telefono").value;
+    // Validación de teléfono: solo números y exactamente 10 dígitos
     if (!/^\d{10}$/.test(telefono)) {
       event.preventDefault();
       alert(
@@ -31,13 +38,8 @@ document
       );
       return;
     }
-    const intereses = document.querySelectorAll(
-      'input[name="intereses"]:checked',
-    );
-    const horario = document.querySelector('input[name="horario"]:checked');
-    const fecha = document.getElementById("fecha").value;
-    const hora = document.getElementById("hora").value;
-    const archivo = document.getElementById("archivo").files[0];
+    
+    // Validación de archivo: solo permitir ciertos tipos y tamaños
     if (archivo) {
       const tiposPermitidos = ["image/jpeg", "image/png", "application/pdf"];
       if (!tiposPermitidos.includes(archivo.type)) {
