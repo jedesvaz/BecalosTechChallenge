@@ -1,0 +1,27 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#numero {
+    padding: 10px;
+    font-size: 18px;
+    width: 200px;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+button {
+    padding: 15px 30px;
+    background-color: #0818ee;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+#mensaje {
+    margin-top: 10px;
+    font-weight: bold;
+}
